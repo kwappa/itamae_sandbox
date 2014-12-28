@@ -140,3 +140,9 @@ known hostsに登録するよ、の例の警告が出て、無事ログインで
     ]
 }
 ```
+
+### itamaeでnginxをインストールする
+
+* `bundler` で `aws-sdk-core` と `itamae` をinstall
+* `aws-sdk-core` でインスタンスIDからIPを取得
+* recipeをssh経由で実行
