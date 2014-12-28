@@ -146,3 +146,20 @@ known hostsに登録するよ、の例の警告が出て、無事ログインで
 * `bundler` で `aws-sdk-core` と `itamae` をinstall
 * `aws-sdk-core` でインスタンスIDからIPを取得
 * recipeをssh経由で実行
+
+#### HTTP / HTTPSを開ける
+
+* security groupのingressを追加。
+
+```
+% aws ec2 authorize-security-group-ingress --group-name devenv-sg --protocol tcp --port 80 --cidr 0.0.0.0/0
+% aws ec2 authorize-security-group-ingress --group-name devenv-sg --protocol tcp --port 443 --cidr 0.0.0.0/0
+```
+
+* CentOS側の `iptables` でも開ける必要がある。
+
+```
+/sbin/iptables -I INPUT 5 -p tcp --dport https -j ACCEPT
+/sbin/iptables -I INPUT 5 -p tcp --dport http -j ACCEPT
+/sbin/service iptables save
+```
