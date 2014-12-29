@@ -169,6 +169,6 @@ known hostsに登録するよ、の例の警告が出て、無事ログインで
 * [k0kubun/itamae-plugin-recipe-rbenv](https://github.com/k0kubun/itamae-plugin-recipe-rbenv)
 * `/etc/bachrc` に環境変数と初期化スクリプトを追記
 * `git` も `gcc` もないのでインストール
-* `libffi-devel` が必要なので追記
+* ~~`libffi-devel` が必要なので追記~~
  * [add package 'libffi-devel' by kwappa · Pull Request #1 · k0kubun/itamae-plugin-recipe-rbenv](https://github.com/k0kubun/itamae-plugin-recipe-rbenv/pull/1)
 * `node.yml` を追加

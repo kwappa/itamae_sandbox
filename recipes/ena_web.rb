@@ -14,7 +14,6 @@ service 'nginx'
 package 'nginx'
 
 # libralies to build rbenv / ruby
-package 'libffi-devel'
 package 'git'
 package 'gcc'
 
